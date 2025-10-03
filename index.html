@@ -11,28 +11,53 @@
         width: 20%; 
     }
 
+    .polarbear{
+        display: inline-block;
+        position: center
+    }
+
     .title{
 	      color: brown;
 	      display: inline-block;
     }
 
     .content{
-	  position: relative;
+	      position: relative;
     }
 
     .box{
-	  border: dotted brown 5px;
-	  color: white;
-	  padding: 30px;
-	  position: absolute;
-	  top: 0;
-	  width: 80%;
-	  margin-left: 10%;
-	  margin-right: 10%;
-	  text-align: center;
-	  background-color: rgba(89,49,9,0.6)
+	      border: dotted brown 5px;
+	      color: white;
+	      padding: 30px;
+	      position: absolute;
+	      top: 0;
+	      width: 80%;
+	      margin-left: 10%;
+	      margin-right: 10%;
+	      text-align: center;
+	      background-color: rgba(89,49,9,0.6)
+    }
+    .image-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 10%; 
+        height: auto; 
     }
 
+    .image-wrapper img {
+        display: block;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .image-wrapper::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 68, 0, 0.8); /* green overlay with transparency */
+        mix-blend-mode: multiply; /* try 'overlay', 'screen', 'color' */
+        pointer-events: none;
+    }
   </style>
 
   <head>
@@ -79,6 +104,9 @@
         </table>
 
         <br><br>
+        <div class="image-wrapper">
+          <img class="polarbear" src="polar-bear-walking.gif">
+        </div>
       </div>
     </div>
 
